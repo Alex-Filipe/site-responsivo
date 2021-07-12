@@ -1,5 +1,7 @@
 const nav = document.querySelector('#header nav')
 
+
+
 /*Open and close menu*/
 const toggle = document.querySelectorAll('nav .toggle')
 for (const element of toggle) {
@@ -24,9 +26,28 @@ const scrollReveal = ScrollReveal({
   reset: true
 })
 
-scrollReveal.reveal(`
+scrollReveal.reveal(
+  `
 #home .image, #home .text, 
 #about .image, #about .text,
 #services .header, #services .card,
-#contact .text, #contact .links`,
-{interval: 100 })
+#contact .text, #contact .links,
+footer .brand, footer .social`,
+
+  { interval: 100 }
+)
+
+/*Button to top*/
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+  if (window.scrollY >= 500) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', function () {
+  backToTop()
+})
