@@ -28,8 +28,8 @@ const scrollReveal = ScrollReveal({
 
 scrollReveal.reveal(
   `
-#home .image, #home .text, 
-#about .image, #about .text,
+#home .text, #home .image, 
+#about .image, 
 #services .header, #services .card,
 #contact .text, #contact .links,
 footer .brand, footer .social`,
@@ -38,9 +38,8 @@ footer .brand, footer .social`,
 )
 
 /*Button to top*/
-
+const backToTopButton = document.querySelector('.back-to-top')
 function backToTop() {
-  const backToTopButton = document.querySelector('.back-to-top')
   if (window.scrollY >= 500) {
     backToTopButton.classList.add('show')
   } else {
@@ -48,6 +47,35 @@ function backToTop() {
   }
 }
 
+/*Menu visible check*/
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection(){
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+      .querySelector('nav ul li a[href*=' + sectionId + ']')
+      .classList.add('active')
+    } else {
+      document
+      .querySelector('nav ul li a[href*=' + sectionId + ']')
+      .classList.remove('active')
+    }
+  }
+
+}
+
+
 window.addEventListener('scroll', function () {
   backToTop()
+  activateMenuAtCurrentSection()
 })
+
