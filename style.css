@@ -10,20 +10,19 @@
 /****VARIAVEIS*********************/
 :root {
   /*Height*/
-  --header-height:3.65rem;
+  --header-height: 3.65rem;
   /*Color*/
-  --color-body: rgb(255, 255, 255);
+  --color-white: rgb(255, 255, 255);
   --header-color: rgb(255, 255, 255);
-  --color-logo: rgb(0, 138, 251);
+  --color-base: rgb(0, 138, 251);
   --color-words: rgb(0, 0, 0);
-  --color-menu: #3d3c42;
   --color-before: rgba(0, 138, 251, 0.493);
   --color-button: rgb(0, 138, 251);
   --color-button-hover: rgb(56, 0, 109);
   --color-button-word: rgb(253, 253, 253);
   /*Font*/
-  --title-font:'Poppins', sans-serif;
-  --body-font:'DM Sans', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
   /*Font-size*/
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
@@ -107,7 +106,7 @@ img {
 }
 
 .toggle {
-  color: var(--color-logo);
+  color: var(--color-base);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -136,11 +135,11 @@ nav {
 }
 
 .logo-alt span {
-  color: var(--color-body);
+  color: var(--color-white);
 }
 
 .logo-color {
-  color: var(--color-logo);
+  color: var(--color-base);
 }
 
 nav ul li {
@@ -155,7 +154,6 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   color: var(--color-button);
-
 }
 
 nav ul li a::after {
@@ -193,7 +191,7 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--color-body);
+  background-color: var(--color-white);
   display: grid;
   place-content: center;
 }
@@ -223,7 +221,7 @@ nav.show div.icon-close {
 
 /*********************HOME************************/
 main {
-  background: var(--color-body);
+  background: var(--color-white);
   margin-top: 4.5rem;
 }
 
@@ -311,7 +309,6 @@ main {
   margin-bottom: 1rem;
 }
 
-
 /*********************SERVICES************************/
 
 .cards .grid {
@@ -321,7 +318,7 @@ main {
 .card {
   padding: 3.625rem 2rem;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-bottom: 0.25rem solid var(--color-logo);
+  border-bottom: 0.25rem solid var(--color-base);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
 }
@@ -362,13 +359,13 @@ main {
 }
 
 #contact ul li i {
-  color: var(--color-logo);
+  color: var(--color-base);
   margin-right: 0.625rem;
 }
 
 /*********************FOOTER************************/
 footer {
-  background-color: var(--color-logo);
+  background-color: var(--color-base);
 }
 
 footer.section {
@@ -381,19 +378,18 @@ footer .logo {
 }
 
 footer .brand p {
-  color: var(--color-body);
+  color: var(--color-white);
   margin-bottom: 0.75rem;
 }
 
-
 footer i {
   font-size: 1.5rem;
-  color: var(--color-body);
+  color: var(--color-white);
 }
 
 footer .social a {
   margin-right: 2rem;
-  transition: .3s;
+  transition: 0.3s;
   display: inline-block;
 }
 
@@ -402,8 +398,8 @@ footer .social a:hover {
 }
 /*Back to top*/
 .back-to-top {
-  background-color: var(--color-logo);
-  color: var(--color-body);
+  background-color: var(--color-base);
+  color: var(--color-white);
   font-size: 1.5rem;
   position: fixed;
   right: 1rem;
@@ -514,7 +510,6 @@ footer .social a:hover {
     grid-auto-flow: column;
     margin: 0 auto;
     align-items: center;
-
   }
 
   #contact .text {

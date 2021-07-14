@@ -1,7 +1,5 @@
 const nav = document.querySelector('#header nav')
 
-
-
 /*Open and close menu*/
 const toggle = document.querySelectorAll('nav .toggle')
 for (const element of toggle) {
@@ -49,7 +47,7 @@ function backToTop() {
 
 /*Menu visible check*/
 const sections = document.querySelectorAll('main section[id]')
-function activateMenuAtCurrentSection(){
+function activateMenuAtCurrentSection() {
   const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
   for (const section of sections) {
@@ -62,20 +60,17 @@ function activateMenuAtCurrentSection(){
 
     if (checkpointStart && checkpointEnd) {
       document
-      .querySelector('nav ul li a[href*=' + sectionId + ']')
-      .classList.add('active')
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
     } else {
       document
-      .querySelector('nav ul li a[href*=' + sectionId + ']')
-      .classList.remove('active')
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
     }
   }
-
 }
-
 
 window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
-
