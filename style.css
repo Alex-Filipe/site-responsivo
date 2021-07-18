@@ -16,10 +16,12 @@
   --header-color: rgb(255, 255, 255);
   --color-base: rgb(0, 138, 251);
   --color-words: rgb(0, 0, 0);
+  --color-word-purple: rgb(147, 31, 255);
   --color-before: rgba(0, 138, 251, 0.493);
   --color-button: rgb(0, 138, 251);
   --color-button-hover: rgb(56, 0, 109);
   --color-button-word: rgb(253, 253, 253);
+  --color-card-icon: rgb(58, 209, 255);
   /*Font*/
   --title-font: 'Poppins', sans-serif;
   --body-font: 'DM Sans', sans-serif;
@@ -269,8 +271,8 @@ main {
   margin-bottom: 2rem;
 }
 
-#home .color-word {
-  color: rgb(147, 31, 255);
+#home .color-word-purple {
+  color: var(--color-word-purple);
   font-weight: 700;
 }
 
@@ -327,7 +329,7 @@ main {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 5rem;
-  color: rgb(58, 209, 255);
+  color: var(--color-card-icon);
 }
 
 .card .title {
