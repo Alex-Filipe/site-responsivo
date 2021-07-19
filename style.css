@@ -22,6 +22,7 @@
   --color-button-hover: rgb(56, 0, 109);
   --color-button-word: rgb(253, 253, 253);
   --color-card-icon: rgb(58, 209, 255);
+  --color-boxshadow: rgba(0, 0, 0, 0.08);
   /*Font*/
   --title-font: 'Poppins', sans-serif;
   --body-font: 'DM Sans', sans-serif;
@@ -319,7 +320,7 @@ main {
 
 .card {
   padding: 3.625rem 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 12px var(--color-boxshadow);
   border-bottom: 0.25rem solid var(--color-base);
   border-radius: 0.25rem 0.25rem 0 0;
   text-align: center;
