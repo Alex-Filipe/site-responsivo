@@ -29,6 +29,7 @@
   /*Font-size*/
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
+  --body-font: 1rem;
 }
 
 /****GERAL*************************/
@@ -37,7 +38,7 @@ html {
 }
 
 body {
-  font: 400 1rem var(--body-font);
+  font: 400 var(--body-font) var(--body-font);
   -webkit-font-smoothing: antialiased;
 }
 
