@@ -13,4 +13,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 :white_check_mark: JavaScript
 
 🔖 Layout
-Você pode visualizar o layout do projeto através desse <a href="https://alex-filipe.github.io/site-responsivo/">link</>a.
+Você pode visualizar o layout do projeto através desse <a href="https://alex-filipe.github.io/site-responsivo/">link.
